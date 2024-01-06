@@ -1,0 +1,22 @@
+# Baking my Pi 4
+
+## Note
+> This is the first time I ever used a Raspberry Pi at all and I wanted to create a Cyber Security Project that would 
+be able to look for potential vulnerabilities in my Wifi, my girlfriend's wifi, and wherever I am able to use this tool.
+> I also wanted to demonstrate my skills, competence and interest in learning more about the field as I want to break
+into the industry after graduating college.
+
+## Getting started
+1. I bought a Raspberry Pi 4 and a 128 gb Micro SD card for the holidays from Microcenter and Amazon.
+2. I also had a usb-c cable laying around that I connected to an old 5 volt power adapter that was used for an old phone.
+3. I then downloaded the Raspberry Pi Imager which allowed me to choose the Pi device I was using, choose the Operating System,
+and choose the storage device that was going to contain the files to set up my Pi.
+4. A problem that I ran into was figuring out how to use the Pi headless, meaning without a monitor.
+5. In the settings of the imager, there was a Secure Shell option that I turned on which in turn allowed me to communicate to the Pi
+with my original desktop.
+6. In powershell, I connected to the Pi with ssh and logged my details.
+7. I then did the command "sudo apt update" to update the local database of available packages.
+8. Then I did "sudo apt-get -uy dist-upgrade" to actually upgrade the installed packages to their latest versions.
+9. I let powershell update everything and in the meantime I downloaded the Nessus file needed for the Pi
+10. I then did "sudo reboot" just to make sure everything was good to go.
+11. I ssh back into my Pi 
