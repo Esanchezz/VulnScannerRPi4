@@ -19,4 +19,11 @@ with my original desktop.
 8. Then I did "sudo apt-get -uy dist-upgrade" to actually upgrade the installed packages to their latest versions.
 9. I let powershell update everything and in the meantime I downloaded the Nessus file needed for the Pi
 10. I then did "sudo reboot" just to make sure everything was good to go.
-11. I ssh back into my Pi 
+11. After this, I downloaded the Nessus Raspberry Pi image to install to the raspberry pi
+12. To do this i used secure copy to copy the file over in powershell.
+13. After copying the file to the rpi, I ssh back into the system I ran the two commands that was told to use on Nessus's website when setting it up on a rpi
+14. When running the command "dpkg -i Nessus-10.0.0-raspberrypios_armhf.deb" we need to do sudo to actually be able to run the command. We also need to make sure the command is correct as the command on the website is outdated so I had to change the command to the updated file name "dpkg -i Nessus-10.6.4-raspberrypios_armhf.deb"
+15. Then we are told to be able to use 'nessusd' daemon we need to use the following command "/bin/systemctl start nessusd.service" and I needed to input my password as authentication was required to start 'nessusd.service'
+16. I realized that I needed to actually see what's going on in my rpi but i didnt have a cable to actually connect it to my monitor so ran the command "sudo apt install tightvncserver" in order to use VNC viewer to remotely see whats actually going on in my rpi
+17. I then downloaded and ran VNC viewer and created a new connection for my rpi
+18. I am now able to remotely access my rpi and the vulnerability scanner was successfully installed
